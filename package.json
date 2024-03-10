@@ -10,7 +10,6 @@
     },
     "author": "EnvyTheme.com",
     "license": "ISC",
-<<<<<<< HEAD
     "dependencies": {
         "animate.css": "^4.1.1",
         "axios": "^0.21.4",
@@ -27,22 +26,4 @@
         "sweetalert2": "^11.1.10",
         "sweetalert2-react-content": "^4.2.0"
     }
-=======
-"dependencies": {
-    "animate.css": "^4.1.1",
-    "axios": "^0.21.4",
-    "next": "^12.1.4",
-    "nodemailer": "^6.7.1",
-    "nodemailer-sendgrid-transport": "^0.2.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-image-lightbox": "^5.2.0",
-    "react-modal-video": "^1.2.11",
-    "react-owl-carousel3": "^2.3.0",
-    "recoil": "^0.3.0",
-    "sass": "^1.43.4",
-    "sweetalert2": "^11.1.10",
-    "sweetalert2-react-content": "^4.2.0"
-}
->>>>>>> b66cba6073dbf8a4b58f2e464d83f52cdc329283
 }
