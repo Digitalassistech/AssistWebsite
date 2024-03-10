@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRecoilState } from 'recoil'
 import { collapsedState } from '../../utils/recoil-atoms'
 import LinkN from '../../utils/ActiveLink';
 
 const Navbar = () => {
     const [collapsed, setCollapsed] = useRecoilState(collapsedState);
+    const [selecLan, setLan] = useState("");
 
     const toggleNavbar = () => {
         setCollapsed(!collapsed);
@@ -20,6 +21,10 @@ const Navbar = () => {
             }
         });
         window.scrollTo(0, 0);
+        const lang = document.getElementsByTagName("body");
+        if (selecLan === "AR") {
+             
+        }
     })
 
     const classOne = collapsed ? 'collapse navbar-collapse' : 'collapse navbar-collapse show';
@@ -33,16 +38,16 @@ const Navbar = () => {
                         <nav className="navbar navbar-expand-lg navbar-light navContainer">
                             <LinkN href="/">
                                 <a onClick={() => setCollapsed(true)} className="navbar-brand">
-                                    <img src="/img/logoAss.webp" alt="logo" height="100px" className="logoAssist"/>
+                                    <img src="/img/logoAss.webp" alt="logo" height="100px" className="logoAssist" />
                                 </a>
                             </LinkN>
-                            <button 
-                                onClick={toggleNavbar} 
+                            <button
+                                onClick={toggleNavbar}
                                 className={classTwo}
-                                type="button" 
-                                data-toggle="collapse" 
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                                aria-expanded="false" 
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false"
                                 aria-label="Toggle navigation"
                             >
                                 <span className="icon-bar top-bar"></span>
@@ -50,34 +55,34 @@ const Navbar = () => {
                                 <span className="icon-bar bottom-bar"></span>
                             </button>
                             <ul className={`${classOne} navbar-nav navList`} id="navbarSupportedContent">
-                                    <li className="nav-item">
-                                        <LinkN href="/" activeClassName="active">
-                                            <a onClick={() => setCollapsed(true)} className="nav-LinkN">
-                                                Home 
-                                            </a>
-                                        </LinkN>
+                                <li className="nav-item">
+                                    <LinkN href="/" activeClassName="active">
+                                        <a onClick={() => setCollapsed(true)} className="nav-LinkN">
+                                            Home
+                                        </a>
+                                    </LinkN>
 
-                                       
-                                    </li>
 
-                                    <li className="nav-item">
-                                        <LinkN href="/about-us" activeClassName="active">
-                                            <a onClick={() => setCollapsed(true)} className="nav-LinkN">
-                                                About Us 
-                                            </a>
-                                        </LinkN>
-                                    </li>
+                                </li>
 
-                                    <li className="nav-item">
-                                        <LinkN href="/services" activeClassName="active">
-                                            <a onClick={() => setCollapsed(true)} className="nav-LinkN">
-                                                Services 
-                                            </a>
-                                        </LinkN>
-                                        
-                                    </li>
+                                <li className="nav-item">
+                                    <LinkN href="/about-us" activeClassName="active">
+                                        <a onClick={() => setCollapsed(true)} className="nav-LinkN">
+                                            About Us
+                                        </a>
+                                    </LinkN>
+                                </li>
 
-                                    {/* <li className="nav-item">
+                                <li className="nav-item">
+                                    <LinkN href="/services" activeClassName="active">
+                                        <a onClick={() => setCollapsed(true)} className="nav-LinkN">
+                                            Services
+                                        </a>
+                                    </LinkN>
+
+                                </li>
+
+                                {/* <li className="nav-item">
                                         <LinkN href="#" activeClassName="active">
                                             <a onClick={e => e.preventDefault()} className="nav-LinkN">
                                                 Case Studies <i className='bx bx-chevron-down'></i>
@@ -119,14 +124,14 @@ const Navbar = () => {
                                         </ul>
                                     </li> */}
 
-                                    <li className="nav-item">
-                                        <LinkN href="/contact">
-                                            <a  className="nav-LinkN" onClick={() => setCollapsed(true)}>
-                                            Contact 
-                                            </a>
-                                        </LinkN>
+                                <li className="nav-item">
+                                    <LinkN href="/contact">
+                                        <a className="nav-LinkN" onClick={() => setCollapsed(true)}>
+                                            Contact
+                                        </a>
+                                    </LinkN>
 
-                                        {/* <ul className="dropdown-menu">
+                                    {/* <ul className="dropdown-menu">
                                             <li className="nav-item">
                                                 <LinkN href="#">
                                                     <a onClick={e => e.preventDefault()} className="nav-LinkN">
@@ -225,9 +230,9 @@ const Navbar = () => {
                                                 </LinkN>
                                             </li>
                                         </ul> */}
-                                    </li>
+                                </li>
 
-                                    {/* <li className="nav-item">
+                                {/* <li className="nav-item">
                                         <LinkN href="#">
                                             <a onClick={e => e.preventDefault()} className="nav-LinkN">
                                                 Blog <i className='bx bx-chevron-down'></i>
@@ -254,10 +259,10 @@ const Navbar = () => {
                                             </li>
                                         </ul>
                                     </li> */}
-                                </ul>
+                            </ul>
                             <div  >
-                          
-                            
+
+
                                 <div className="others-option d-flex align-items-center">
                                     {/* <div className="option-item">
                                         <form className="search-box">
@@ -269,6 +274,10 @@ const Navbar = () => {
                                     </div> */}
 
                                     <div className="option-item getStartedButton">
+                                        <select className="selectLan" onChange={(e) => setLan(e.target.value)}>
+                                            <option>EN</option>
+                                            <option>AR</option>
+                                        </select>
                                         <LinkN href="/contact">
                                             <a onClick={() => setCollapsed(true)} className="default-btn">
                                                 <i className="flaticon-right"></i> Get Started <span></span>

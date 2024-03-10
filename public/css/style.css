@@ -76,7 +76,22 @@ body {
   font-size: 17px;
   font-family: "Nunito", sans-serif;
 }
-
+.getStartedButton{
+  display: flex;
+  align-items: center;
+}
+.getStartedButton .selectLan{
+  padding: 5px;
+  margin: 5px;
+  margin-top: 8px !important;
+  border-radius: 8px;
+  color: var(--text2-color);
+  border: 1px solid var(--border-color);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
 img {
   max-width: 100%;
   height: auto;

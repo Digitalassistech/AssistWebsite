@@ -14,7 +14,6 @@ import StartProject from '../components/DataScienceAndMLCompany/StartProject';
 import Footer from '../components/_App/Footer';
 import AboutUsContent from '../components/AboutUsTwo/AboutUsContent';
 import OurMission from '../components/AboutUsTwo/OurMission';
-import Slider from '../components/Slider/Slider';
 import Testimonials from '../components/AboutUsTwo/Testimonials';
 
 const Index = () => {
