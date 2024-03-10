@@ -21,7 +21,7 @@
         "react-image-lightbox": "^5.2.0",
         "react-modal-video": "^1.2.11",
         "react-owl-carousel3": "^2.3.0",
-        "recoil": "0.0.10",
+        "recoil": "^0.3.0",
         "sass": "^1.43.4",
         "sweetalert2": "^11.1.10",
         "sweetalert2-react-content": "^4.2.0"
